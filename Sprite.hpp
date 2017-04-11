@@ -54,6 +54,8 @@ public:
     float get_x_Origin();
     float get_y_Origin();
     float get_radius();
+    float get_x();
+    float get_y();
     
     /* -------------------Display method------------------------------------- */
     virtual void render(SDL_Renderer *renderer, float timeBetweenFrames) = 0; //each friend class will have it's own render method

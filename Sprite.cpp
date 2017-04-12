@@ -85,6 +85,22 @@ bool Sprite::offScreen_x(bool right, float speed, float timeBetweenFrames)
     }
 }
 
+float Sprite::get_x_Origin(){
+    return _x_Origin;
+}
+
+float Sprite::get_y_Origin(){
+    return _y_Origin;
+}
+
+float Sprite::get_x(){
+    return _x;
+}
+
+float Sprite::get_y(){
+    return _y;
+}
+
 
 void Sprite::logSDL_Error(const std::string &msg)
 {
@@ -99,19 +115,4 @@ void Sprite::logIMG_Error(const std::string &msg)
 void Sprite::logTTF_Error(const std::string &msg)
 {
     std::cerr << msg << " error: " << TTF_GetError() << std::endl;
-}
-
-float Sprite::get_radius()
-{
-    return _spriteWidth/2.0f;
-}
-
-float Sprite::get_x_Origin()
-{
-    return _x + get_radius();
-}
-
-float Sprite::get_y_Origin()
-{
-    return  _y + get_radius();
 }
